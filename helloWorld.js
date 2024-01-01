@@ -59,7 +59,8 @@ export default function () {
   var contract = new web3.eth.Contract(abi, address);
   contract.methods.getMessage().call().then(function (result) {
       console.log(result);
-      document.getElementById("contract-result").textContent = result;
+      let date = new Date(result * 1000);
+      document.getElementById("contract-result").textContent = date.toLocaleString();
   });
 
   document.getElementById("button_set").onclick = () => {
