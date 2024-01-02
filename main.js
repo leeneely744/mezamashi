@@ -1,11 +1,8 @@
-var express = require('express');
-var app = express();
-app.listen(8080);
+var http = require('http');
+var url = require('url');
 
-app.get('/', function(req, res) {
-    res.send('Hello GET World');
-});
-
-app.post('/set', function(req, res) {
-    res.send('Hello POST World');
-});
+var server = http.createServer(function(req, res) {
+  var url_parse = url.parse(req.url, true);
+  console.log(url_parse);
+  res.end();
+}).listen(8080);
