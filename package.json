@@ -1,5 +1,18 @@
 {
   "dependencies": {
+    "express": "^4.18.2",
     "web3": "^4.3.0"
-  }
+  },
+  "name": "mezamashi",
+  "description": "- web3.js のバージョンを挙げる - node.js にする - ERC20",
+  "version": "1.0.0",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
